@@ -3,7 +3,7 @@
 const ContactUs = () => {
     return (
         <div className="my-32 px-10">
-            <h2 className="text-3xl border-b-2 mx-auto border-[#453F78] w-80 text-center font-permanentMarker">Our Location</h2>
+            <h2 className="text-4xl border-b-2 mx-auto border-[#453F78] w-80 text-center font-permanentMarker">Our Location</h2>
             <p className="mb-20 mt-5 text-center font-medium">We stand at the middle point of your capmpuss</p>
             <div className="relative" style={{ paddingTop: "56.25%" }}>
                 <div className="absolute inset-0">

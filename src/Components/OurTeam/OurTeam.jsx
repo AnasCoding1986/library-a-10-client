@@ -6,7 +6,7 @@ import tfour from "../../assets/t-4.jpg";
 const OurTeam = () => {
     return (
         <div className="py-28 px-10 bg-[#E8EFCF]">
-            <h2 className="text-3xl border-b-2 mx-auto border-[#453F78] w-80 text-center font-permanentMarker">Our Team</h2>
+            <h2 className="text-4xl border-b-2 mx-auto border-[#453F78] w-80 text-center font-permanentMarker">Our Team</h2>
             <p className="mb-20 mt-5 text-center font-medium">Our members are always ready to help you</p>
             <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
                 <div className="md:col-span-1 flex justify-center flex-col">

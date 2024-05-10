@@ -1,21 +1,17 @@
-Server Repo Link: https://github.com/programming-hero-web-course-4/b9a10-server-side-AnasCoding1986
+Server Repo Link: https://github.com/Porgramming-Hero-web-course/b9a11-server-side-AnasCoding1986
 
-Client Repo Link: https://github.com/programming-hero-web-course-4/B9A10-client-side-AnasCoding1986  
+Client Repo Link: https://github.com/Porgramming-Hero-web-course/b9a11-client-side-AnasCoding1986 
 
-Website Name : Easy Tour
+Website Name : BookshelfXchange
 
-Selected Category : Requirements 1
+Selected Category : Assignment_ID: assignment_category_0008
 
-live site: https://tourism-6b17e.web.app/
+live site: 
 
 some key features are below:
 
-ntroduction to Easy Tour: Easy Tour is a comprehensive tourism website designed to simplify and enhance the travel planning experience for users worldwide.
-
-Key Features: Explore our website's features, including seamless booking, personalized recommendations, expert guidance, interactive itinerary builder, and exclusive deals and discounts.
-
-Getting Started: Get started quickly by navigating to our homepage and exploring various destinations, accommodations, activities, and travel guides. Sign up for a free account to unlock additional benefits.
-
-Contributing: We welcome contributions from developers, designers, and travel enthusiasts to improve Easy Tour's functionality, user experience, and content. Check out our GitHub repository for guidelines and opportunities to contribute.
-
-Feedback and Support: We value user feedback and strive to continuously enhance Easy Tour based on your suggestions and needs. Reach out to our support team for assistance or share your ideas for future improvements.
+.Extensive Book Collection: The website boasts a vast array of books across different categories, catering to the diverse interests and academic needs of students and faculty.
+.User-friendly Interface: With a clean and intuitive design, navigating through the website is effortless, allowing users to easily search for books, check availability, and manage borrowing requests.
+.Interactive Book Management: Users can contribute to the library's collection by suggesting new books, and librarians have the capability to update book information, ensuring the catalog remains current and relevant.
+.Efficient Borrowing System: The website facilitates smooth borrowing and returning processes, providing users with real-time updates on book availability and due dates, enhancing efficiency and accountability.
+.Comprehensive Tracking: Through the website, administrators can monitor borrowing trends, analyze popular genres, and generate reports, enabling informed decision-making and resource allocation for continuous improvement.
