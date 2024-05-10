@@ -1,0 +1,284 @@
+[
+    {
+      "name": "Bangladesh",
+      "description": "Bangladesh, located in South Asia, is known for its lush greenery, rich cultural heritage, and vibrant history. It is home to diverse landscapes ranging from the world's largest mangrove forest to picturesque beaches and hill districts.",
+      "photo": "https://i.ibb.co/BN5PMfC/c1-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Sundarban",
+          "country_Name": "Bangladesh",
+          "location": "Khulna Division",
+          "short_description": "The largest mangrove forest in the world.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Cox’s Bazar",
+          "country_Name": "Bangladesh",
+          "location": "Chittagong Division",
+          "short_description": "The longest natural sea beach in the world.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Rangamati",
+          "country_Name": "Bangladesh",
+          "location": "Chittagong Hill Tracts",
+          "short_description": "A hill district known for its scenic beauty and indigenous culture.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Bandarban",
+          "country_Name": "Bangladesh",
+          "location": "Chittagong Hill Tracts",
+          "short_description": "Famous for its lush greenery, hills, and indigenous communities.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Saint Martin’s Island",
+          "country_Name": "Bangladesh",
+          "location": "Bay of Bengal",
+          "short_description": "A picturesque coral island known for its crystal-clear waters and sandy beaches.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        }
+      ]
+    },
+    {
+      "name": "Thailand",
+      "description": "Thailand, in Southeast Asia, is renowned for its tropical beaches, royal palaces, ancient ruins, and ornate temples. It's a popular tourist destination known for its rich culture, vibrant nightlife, and delicious cuisine.",
+      "photo": "https://i.ibb.co/f9pg6SZ/c2-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Bangkok",
+          "country_Name": "Thailand",
+          "location": "Central Thailand",
+          "short_description": "The capital city known for its vibrant street life and ornate shrines.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Chiang Mai",
+          "country_Name": "Thailand",
+          "location": "Northern Thailand",
+          "short_description": "Famous for its temples, old city walls, and mountainous landscape.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Ayutthaya",
+          "country_Name": "Thailand",
+          "location": "Central Thailand",
+          "short_description": "A UNESCO World Heritage Site known for its ancient ruins and temples.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Phuket",
+          "country_Name": "Thailand",
+          "location": "Southern Thailand",
+          "short_description": "Famous for its beaches, clear waters, and vibrant nightlife.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Phi Phi Islands",
+          "country_Name": "Thailand",
+          "location": "Andaman Sea",
+          "short_description": "A group of islands known for their stunning beaches and clear waters.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        }
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "description": "Indonesia, the largest archipelago in the world, is famous for its stunning natural landscapes, rich cultural diversity, and ancient temples. It offers a wide range of experiences from relaxing on tropical beaches to exploring active volcanoes and lush rainforests.",
+      "photo": "https://i.ibb.co/4Tjxswt/c3-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Bali",
+          "country_Name": "Indonesia",
+          "location": "Indonesian Archipelago",
+          "short_description": "Famous for its beaches, coral reefs, and rich culture.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Borobudur Temple",
+          "country_Name": "Indonesia",
+          "location": "Central Java",
+          "short_description": "The world's largest Buddhist temple and a UNESCO World Heritage Site.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Komodo National Park",
+          "country_Name": "Indonesia",
+          "location": "Lesser Sunda Islands",
+          "short_description": "Home to the Komodo dragon, the world's largest lizard species.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Raja Ampat Islands",
+          "country_Name": "Indonesia",
+          "location": "West Papua",
+          "short_description": "A paradise for divers, known for its rich marine biodiversity.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Yogyakarta",
+          "country_Name": "Indonesia",
+          "location": "Java",
+          "short_description": "Known for its traditional arts and cultural heritage.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        }
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "description": "Malaysia, located in Southeast Asia, is known for its diverse culture, stunning landscapes, and modern cities. It offers a blend of bustling metropolises, lush rainforests, and idyllic islands, making it a popular destination for travelers.",
+      "photo": "https://i.ibb.co/4Tjxswt/c3-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Kuala Lumpur",
+          "country_Name": "Malaysia",
+          "location": "Peninsular Malaysia",
+          "short_description": "The capital city known for its modern skyline and colonial architecture.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Langkawi",
+          "country_Name": "Malaysia",
+          "location": "Langkawi Archipelago",
+          "short_description": "An archipelago known for its beaches, rainforest, and duty-free shopping.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Penang",
+          "country_Name": "Malaysia",
+          "location": "Peninsular Malaysia",
+          "short_description": "An island state known for its colonial architecture, street food, and beaches.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Cameron Highlands",
+          "country_Name": "Malaysia",
+          "location": "Peninsular Malaysia",
+          "short_description": "A hill station known for its tea plantations, cool climate, and strawberry farms.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Taman Negara National Park",
+          "country_Name": "Malaysia",
+          "location": "Peninsular Malaysia",
+          "short_description": "One of the oldest rainforests in the world, known for its biodiversity and jungle treks.",
+          "average_cost": "Varies"
+        }
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "description": "Vietnam, located in Southeast Asia, is known for its breathtaking landscapes, rich history, and vibrant culture. From bustling cities to serene countryside and pristine beaches, Vietnam offers a diverse range of experiences for travelers.",
+      "photo": "https://i.ibb.co/cJZQNqN/c5-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Ha Long Bay",
+          "country_Name": "Vietnam",
+          "location": "Quang Ninh Province",
+          "short_description": "A UNESCO World Heritage Site known for its emerald waters and thousands of towering limestone islands topped with rainforests.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Ho Chi Minh City",
+          "country_Name": "Vietnam",
+          "location": "Southern Vietnam",
+          "short_description": "The largest city in Vietnam, known for its French colonial landmarks, bustling markets, and vibrant street food scene.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Hoi An Ancient Town",
+          "country_Name": "Vietnam",
+          "location": "Quang Nam Province",
+          "short_description": "A well-preserved ancient town known for its charming architecture, lantern-lit streets, and bustling riverside markets.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Phong Nha Caves",
+          "country_Name": "Vietnam",
+          "location": "Quang Binh Province",
+          "short_description": "A UNESCO World Heritage Site known for its spectacular limestone karst landscapes and extensive cave systems, including the world's largest cave, Son Doong.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Mekong Delta",
+          "country_Name": "Vietnam",
+          "location": "Southern Vietnam",
+          "short_description": "A vast maze of rivers, swamps, and islands known for its floating markets, lush orchards, and traditional villages.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        }
+      ]
+    },
+    {
+      "name": "Cambodia",
+      "description": "Cambodia, located in Southeast Asia, is renowned for its ancient temples, rich history, and vibrant culture. Home to the magnificent Angkor Wat complex and other archaeological wonders, Cambodia offers a fascinating glimpse into its glorious past.",
+      "photo": "https://i.ibb.co/TPF7CMT/c6-png.jpg",
+      "spots": [
+        {
+          "tourist_spot_name": "Angkor Wat",
+          "country_Name": "Cambodia",
+          "location": "Siem Reap Province",
+          "short_description": "The largest religious monument in the world and a UNESCO World Heritage Site, known for its stunning architecture and intricate carvings.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Siem Reap",
+          "country_Name": "Cambodia",
+          "location": "Siem Reap Province",
+          "short_description": "A charming town near the Angkor archaeological park, known for its lively atmosphere, street food, and vibrant night markets.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Phnom Penh",
+          "country_Name": "Cambodia",
+          "location": "Phnom Penh Municipality",
+          "short_description": "The capital city known for its French colonial architecture, bustling markets, and tragic history, including the Killing Fields and Tuol Sleng Genocide Museum.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Kep",
+          "country_Name": "Cambodia",
+          "location": "Kep Province",
+          "short_description": "A coastal town known for its tranquil beaches, seafood markets, and colonial villas, offering a relaxed getaway.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        },
+        {
+          "tourist_spot_name": "Bokor National Park",
+          "country_Name": "Cambodia",
+          "location": "Kampot Province",
+          "short_description": "A protected area known for its lush rainforests, waterfalls, and French colonial hill station ruins, offering hiking and wildlife spotting opportunities.",
+          "average_cost": "Varies",
+          "seasonality": "Year-round"
+        }
+      ]
+    }
+  ]
+  
