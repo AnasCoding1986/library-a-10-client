@@ -1,7 +1,7 @@
 {
     "books": [
       {
-        "image": "https://example.com/book_image1.jpg",
+        "image": "https://i.ibb.co/n8YF9Z6/nobel1-png.jpg",
         "name": "The Great Gatsby",
         "quantity": 15,
         "author": "F. Scott Fitzgerald",
@@ -11,7 +11,7 @@
         "contents": "The Great Gatsby follows the story of Jay Gatsby, a mysterious millionaire who throws lavish parties in the hope of winning back his lost love, Daisy Buchanan."
       },
       {
-        "image": "https://example.com/book_image2.jpg",
+        "image": "https://i.ibb.co/t2vH1wq/nobel2-png.jpg",
         "name": "To Kill a Mockingbird",
         "quantity": 12,
         "author": "Harper Lee",
@@ -21,7 +21,7 @@
         "contents": "To Kill a Mockingbird tells the story of Scout Finch, a young girl growing up in the racially charged atmosphere of Alabama during the 1930s."
       },
       {
-        "image": "https://example.com/book_image3.jpg",
+        "image": "https://i.ibb.co/jwRxCj4/nobel3-png.jpg",
         "name": "The Hobbit",
         "quantity": 20,
         "author": "J.R.R. Tolkien",
@@ -31,7 +31,7 @@
         "contents": "The Hobbit follows the journey of Bilbo Baggins, a hobbit who is recruited by the wizard Gandalf to accompany a group of dwarves on a quest to reclaim their homeland from a fearsome dragon."
       },
       {
-        "image": "https://example.com/book_image4.jpg",
+        "image": "https://i.ibb.co/bF7nQsZ/nobel4-png.jpg",
         "name": "1984",
         "quantity": 8,
         "author": "George Orwell",
@@ -41,7 +41,7 @@
         "contents": "1984 portrays a society under constant surveillance by the authoritarian regime of Big Brother, where independent thought is punished and truth is manipulated."
       },
       {
-        "image": "https://example.com/book_image5.jpg",
+        "image": "https://i.ibb.co/87pDdFL/thriller1-png.jpg",
         "name": "The Da Vinci Code",
         "quantity": 18,
         "author": "Dan Brown",
@@ -51,7 +51,7 @@
         "contents": "The Da Vinci Code follows the Harvard symbologist Robert Langdon as he investigates a murder in the Louvre and uncovers clues that lead to a shocking revelation."
       },
       {
-        "image": "https://example.com/book_image6.jpg",
+        "image": "https://i.ibb.co/QNYB8S4/thriller2-png.jpg",
         "name": "Gone Girl",
         "quantity": 10,
         "author": "Gillian Flynn",
@@ -61,7 +61,7 @@
         "contents": "Gone Girl tells the story of Nick and Amy Dunne, whose marriage takes a dark turn when Amy goes missing on their fifth wedding anniversary."
       },
       {
-        "image": "https://example.com/book_image7.jpg",
+        "image": "https://i.ibb.co/t4YhV7N/thriller3-png.jpg",
         "name": "The Girl with the Dragon Tattoo",
         "quantity": 14,
         "author": "Stieg Larsson",
@@ -71,7 +71,7 @@
         "contents": "The Girl with the Dragon Tattoo introduces Lisbeth Salander, a brilliant but troubled hacker, and Mikael Blomkvist, an investigative journalist, as they join forces to solve a decades-old disappearance."
       },
       {
-        "image": "https://example.com/book_image8.jpg",
+        "image": "https://i.ibb.co/PNyBXdR/thriller4-png.jpg",
         "name": "The Silence of the Lambs",
         "quantity": 6,
         "author": "Thomas Harris",
@@ -81,7 +81,7 @@
         "contents": "The Silence of the Lambs follows FBI trainee Clarice Starling as she seeks the help of incarcerated serial killer Hannibal Lecter to catch another killer, known as Buffalo Bill."
       },
       {
-        "image": "https://example.com/book_image9.jpg",
+        "image": "https://i.ibb.co/K2yh5Sq/history1-png.jpg",
         "name": "Sapiens: A Brief History of Humankind",
         "quantity": 22,
         "author": "Yuval Noah Harari",
@@ -91,7 +91,7 @@
         "contents": "Sapiens examines key developments in human history, from the cognitive revolution to the agricultural revolution, and their impact on society and culture."
       },
       {
-        "image": "https://example.com/book_image10.jpg",
+        "image": "https://i.ibb.co/xMM7kvs/history2-png.jpg",
         "name": "The Rise and Fall of the Third Reich",
         "quantity": 9,
         "author": "William L. Shirer",
@@ -101,7 +101,7 @@
         "contents": "The Rise and Fall of the Third Reich offers a detailed account of the events that shaped one of the darkest periods in human history, including Hitler's totalitarian regime and the Holocaust."
       },
       {
-        "image": "https://example.com/book_image11.jpg",
+        "image": "https://i.ibb.co/TK1gXqj/history3-png.jpg",
         "name": "A People's History of the United States",
         "quantity": 11,
         "author": "Howard Zinn",
@@ -111,7 +111,7 @@
         "contents": "A People's History of the United States challenges traditional narratives of American history by highlighting the struggles and achievements of ordinary people, from Native Americans to labor activists."
       },
       {
-        "image": "https://example.com/book_image12.jpg",
+        "image": "https://i.ibb.co/CJKymnS/history4-png.jpg",
         "name": "Genghis Khan and the Making of the Modern World",
         "quantity": 7,
         "author": "Jack Weatherford",
@@ -121,7 +121,7 @@
         "contents": "Genghis Khan and the Making of the Modern World explores the rise of the Mongol Empire and its impact on global history, from the spread of trade and technology to the exchange of ideas and cultures."
       },
       {
-        "image": "https://example.com/book_image13.jpg",
+        "image": "https://i.ibb.co/M1RJct4/drama1-png.jpg",
         "name": "Hamlet",
         "quantity": 13,
         "author": "William Shakespeare",
@@ -131,7 +131,7 @@
         "contents": "Hamlet tells the story of the Prince of Denmark, who seeks to avenge his father's murder while grappling with existential questions about life and death."
       },
       {
-        "image": "https://example.com/book_image14.jpg",
+        "image": "https://i.ibb.co/qgP7RLZ/drama2-png.jpg",
         "name": "A Streetcar Named Desire",
         "quantity": 16,
         "author": "Tennessee Williams",
@@ -141,7 +141,7 @@
         "contents": "A Streetcar Named Desire follows the troubled relationship between Blanche DuBois, a fading Southern belle, and Stanley Kowalski, a working-class brute, as they clash in a cramped New Orleans apartment."
       },
       {
-        "image": "https://example.com/book_image15.jpg",
+        "image": "https://i.ibb.co/Xt6XGPm/drama3-png.jpg",
         "name": "Death of a Salesman",
         "quantity": 10,
         "author": "Arthur Miller",
@@ -151,7 +151,7 @@
         "contents": "Death of a Salesman follows Willy Loman, a traveling salesman, as he confronts his failures and regrets while trying to secure a better future for his family."
       },
       {
-        "image": "https://example.com/book_image16.jpg",
+        "image": "https://i.ibb.co/SvcFkzJ/drama4-png.jpg",
         "name": "Romeo and Juliet",
         "quantity": 8,
         "author": "William Shakespeare",
