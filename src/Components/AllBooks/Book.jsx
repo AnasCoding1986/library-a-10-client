@@ -2,6 +2,7 @@
 import Rating from 'react-rating';
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 
 const Book = ({ book }) => {
@@ -24,7 +25,7 @@ const Book = ({ book }) => {
                 <p className="font-medium"><span className="font-clicker">Author:</span> {author}</p>
                 <p className="font-medium"><span className="font-clicker">Category:</span> {category}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn text-white bg-[#453F78]">Update</button>
+                    <Link to={`/update/${_id}`}><button className="btn text-white bg-[#453F78]">Update</button></Link>
                 </div>
             </div>
         </div>
