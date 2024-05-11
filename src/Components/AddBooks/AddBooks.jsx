@@ -5,97 +5,107 @@ const AddBooks = () => {
     const handleAdd = e => {
         e.preventDefault();
         const form = e.target;
-        const photo = form.photo.value;
-        const touristsSpotName = form.touristsSpotName.value;
-        const country = form.country.value;
-        const location = form.location.value;
+        const image = form.image.value;
+        const bookName = form.bookName.value;
+        const quantity = parseInt(form.quantity.value); // Parse quantity to integer
+        const author = form.author.value;
+        const category = form.category.value;
         const description = form.description.value;
-        const cost = form.cost.value;
-        const seasonality = form.seasonality.value;
-        const travelTime = form.travelTime.value;
-        const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
-        const email = form.email.value;
-        const name = form.name.value;
-        const spot = {photo,touristsSpotName,country,location,description,cost,seasonality,travelTime,totaVisitorsPerYear,email,name}
-        console.log(spot);
+        const rating = parseInt(form.rating.value);
+        const contents = form.contents.value;
+        
+        // Check if quantity is a valid number
+        if (isNaN(quantity) || quantity <= 0) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Quantity must be a positive number',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+            return; // Stop execution if quantity is invalid
+        }
 
-        // send data to the server
-        fetch('https://tourism-rosy.vercel.app/spot', {
+        // Check if rating is within valid range (1-5)
+        if (isNaN(rating) || rating < 1 || rating > 5) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Rating must be a number between 1 and 5',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+            return; // Stop execution if rating is invalid
+        }
+
+        const book = {image, bookName, quantity, author, category, description, rating, contents};
+        console.log(book);
+
+        // Send data to the server
+        fetch('http://localhost:5000/books', {
             method: 'POST',
             headers: {
-                'content-type' : 'application/json'
+                'content-type': 'application/json'
             },
-            body : JSON.stringify(spot)
+            body: JSON.stringify(book)
         })
         .then(res => res.json())
         .then(data => {
             if (data.insertedId) {
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Spot added successfully',
+                    text: 'Book added successfully',
                     icon: 'success',
                     confirmButtonText: 'Next'
-                  })
+                });
             }
-        })
-    }
+        });
+    };
 
     return (
         <div className="py-28 px-10 bg-[#f8f8fa]">
             <h2 className="text-4xl border-b-2 mx-auto border-[#453F78] w-80 text-center font-permanentMarker">Add Books</h2>
             <p className="mb-20 mt-5 text-center font-medium">Please add only educational Books</p>
-        <div>
-            <form onSubmit={handleAdd} className="md:grid grid-cols-2 gap-5 p-10">
-                <div className="my-2">
-                    <label className="font-medium">Photo</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="photo" placeholder="Image URL" />
+            <div>
+                <div>
+                    <form onSubmit={handleAdd} className="md:grid grid-cols-2 gap-5 p-10">
+                        <div className="my-2">
+                            <label className="font-medium">Image</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="image" placeholder="Image URL" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Name</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="bookName" placeholder="Book name" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Quantity of the book</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="number" name="quantity" placeholder="Quantity" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Author Name</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="author" placeholder="Author Name" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Category</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="category" placeholder="for example - Novel, Thriller, History, Drama, Sci-Fi, etc" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Short description</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="description" placeholder="Short description" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Rating</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" />
+                        </div>
+                        <div className="my-2">
+                            <label className="font-medium">Contents</label><br />
+                            <input className="border-2 w-full p-2 mt-2" type="text" name="contents" placeholder="Some contents/texts about the book (could be static)" />
+                        </div>
+                        <div className="my-2 col-span-2">
+                            <input className="border-2 w-full font-bold p-3 bg-[#795458] text-white mt-2" type="submit" name="add" value="Add Book" />
+                        </div>
+                    </form>
                 </div>
-                <div className="my-2">
-                    <label className="font-medium">Tourists spot name</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="touristsSpotName" placeholder="Tourists spot name" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">country_Name</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="country" placeholder="country_Name" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">Location</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="location" placeholder="location" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">Short description</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="description" placeholder="Short description" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">Average_cost</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="cost" placeholder="Average_cost" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">Seasonality</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="seasonality" placeholder="Seasonality" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">Travel_time</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="travelTime" placeholder="Travel_time" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">totaVisitorsPerYear</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="totaVisitorsPerYear" placeholder="Image URL" />
-                </div>
-                <div className="my-2">
-                    <label className="font-medium">User Email</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="email" name="email" placeholder="User Email" />
-                </div>
-                <div className="my-2 col-span-2">
-                    <label className="font-medium">User Name</label><br />
-                    <input className="border-2 w-full p-2 mt-2" type="text" name="name" placeholder="User Name" />
-                </div>
-                <div className="my-2 col-span-2">
-                    <input className="border-2 w-full font-bold p-3 bg-[#795458] text-white mt-2" type="submit" name="add" value="Add tourist spot" />
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
     );
 };
 
