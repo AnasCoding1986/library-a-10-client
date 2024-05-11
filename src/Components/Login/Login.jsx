@@ -75,7 +75,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary bg-[#FFC94A] border-none">Login</button>
+                                <button className="btn btn-primary bg-[#795458] border-none">Login</button>
                             </div>
                         </form>
 
@@ -83,7 +83,7 @@ const Login = () => {
 
                         <button onClick={handleGithubSignIn} className="flex items-center justify-center gap-3 w-3/4 mx-auto mb-5 p-3 rounded-md bg-[#24292e] text-sm text-[white]"><FaGithub /> Sign Up With Github</button>
 
-                        <p className="text-sm text-center mb-4">New here? Let&apos;s get started! <br /> <Link className="text-[#FFC94A] font-bold" to="/register">Create an account</Link> now.</p>
+                        <p className="text-sm text-center mb-4">New here? Let&apos;s get started! <br /> <Link className="text-[#795458] font-bold" to="/register">Create an account</Link> now.</p>
                     </div>
                 </div>
             </div>

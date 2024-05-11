@@ -22,6 +22,7 @@ import Nobel from './Components/CategoriesOfBook/Nobel.jsx';
 import Thriller from './Components/CategoriesOfBook/Thriller.jsx';
 import Drama from './Components/CategoriesOfBook/Drama.jsx';
 import History from './Components/CategoriesOfBook/History.jsx';
+import AddBooks from './Components/AddBooks/AddBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         path: "/history",
         element: <History></History>,
         loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/addBooks",
+        element: <PrivateRpute><AddBooks></AddBooks></PrivateRpute>
       },
       {
         path: "/addSpots",

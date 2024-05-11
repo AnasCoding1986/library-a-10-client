@@ -12,7 +12,7 @@ const Categoty = () => {
             <p className="mb-20 mt-5 text-center font-medium">Explore your desired category</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <Link to="/nobel">
-                    <div className="card bg-base-100 shadow-xl border-[#FFC94A] border-[1px] border-dotted">
+                    <div className="card bg-base-100 shadow-xl border-[#795458] border-2 border-dotted">
                         <figure className="px-10 pt-10">
                             <img src={nobel} alt="Shoes" className="rounded-xl w-full h-56" />
                         </figure>
@@ -25,7 +25,7 @@ const Categoty = () => {
                     </div>
                 </Link>
                 <Link to="/thriller">
-                    <div className="card bg-base-100 shadow-xl  border-[#FFC94A] border-[1px] border-dotted">
+                    <div className="card bg-base-100 shadow-xl  border-[#795458] border-2 border-dotted">
                         <figure className="px-10 pt-10">
                             <img src={thriller} alt="Shoes" className="rounded-xl w-full h-56" />
                         </figure>
@@ -38,7 +38,7 @@ const Categoty = () => {
                     </div>
                 </Link>
                 <Link to="/drama">
-                    <div className="card bg-base-100 shadow-xl  border-[#FFC94A] border-[1px] border-dotted">
+                    <div className="card bg-base-100 shadow-xl  border-[#795458] border-2 border-dotted">
                         <figure className="px-10 pt-10">
                             <img src={drama} alt="Shoes" className="rounded-xl w-full h-56" />
                         </figure>
@@ -51,7 +51,7 @@ const Categoty = () => {
                     </div>
                 </Link>
                 <Link to="/history">
-                    <div className="card bg-base-100 shadow-xl  border-[#FFC94A] border-[1px] border-dotted">
+                    <div className="card bg-base-100 shadow-xl  border-[#795458] border-2 border-dotted">
                         <figure className="px-10 pt-10">
                             <img src={history} alt="Shoes" className="rounded-xl w-full h-56" />
                         </figure>

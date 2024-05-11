@@ -110,10 +110,10 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary bg-[#FFC94A] border-none">Register</button>
+                                <button className="btn btn-primary bg-[#795458] border-none">Register</button>
                             </div>
                         </form>
-                        <p className="text-sm text-center mb-4">Already have an account? Please <Link className="text-[tomato] font-bold" to="/login">Login</Link></p>
+                        <p className="text-sm text-center mb-4">Already have an account? Please <Link className="text-[#795458] font-bold" to="/login">Login</Link></p>
                     </div>
                 </div>
             </div>

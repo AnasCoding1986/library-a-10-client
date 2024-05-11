@@ -38,7 +38,7 @@ const Navbar = () => {
         {
             user ?
                 <div className="flex">
-                    <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" className="mr-3" to="/addSpots">Add Books</NavLink></li>
+                    <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" className="mr-3" to="/addBooks">Add Books</NavLink></li>
                     <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/allBooks">All Books</NavLink></li>
                     <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/mylist">Borrowed Books</NavLink></li>
                 </div> :
