@@ -30,7 +30,7 @@ const Categoty = () => {
                             <img src={thriller} alt="Shoes" className="rounded-xl w-full h-56" />
                         </figure>
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">THriller</h2>
+                            <h2 className="card-title">Thriller</h2>
                             <div className="card-actions">
                                 <button className="btn bg-[#453F78] border-none btn-primary">Available Books</button>
                             </div>
