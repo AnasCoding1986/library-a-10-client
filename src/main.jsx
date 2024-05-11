@@ -18,6 +18,7 @@ import PrivateRpute from './Components/Route/PrivateRpute.jsx';
 import MyList from './Components/MyList/MyList.jsx';
 import GrandTotal from './Components/GrandTotal/GrandTotal.jsx';
 import Spots from './Components/Spots/Spots.jsx';
+import AllBooks from './Components/AllBooks/AllBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch('https://tourism-rosy.vercel.app/spot')
+      },
+      {
+        path: "/allBooks",
+        element: <AllBooks></AllBooks>,
+        loader: () => fetch('http://localhost:5000/books')
       },
       {
         path: "/grandTotal",
