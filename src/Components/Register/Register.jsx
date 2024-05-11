@@ -1,5 +1,3 @@
-
-
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -79,12 +77,6 @@ const Register = () => {
                                 })} />
                                 {errors.email && <span className="text-sm text-red-500 font-medium">{errors.email.message}</span>}
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Image</span>
-                                </label>
-                                <input type="photo" placeholder="Your Image" className="input input-bordered" />
-                            </div>
                             <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
@@ -97,15 +89,15 @@ const Register = () => {
                                 className="input input-bordered" {...register("password", {
                                     required: {
                                         value: true,
-                                        message: "You must input your paswword"
+                                        message: "You must input your password"
                                     },
                                     pattern: {
-                                        value: /^(?=.*[A-Z])(?=.*[a-z]).+$/,
-                                        message: "Password must contain at least one uppercase and one lowercase letter"
+                                        value: /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{"':;?/>.<,]).+$/,
+                                        message: "Password must contain at least one uppercase letter and one special character"
                                     },
                                     minLength: {
                                         value: 6,
-                                        message: "Password must have at least six character"
+                                        message: "Password must have at least six characters"
                                     }
                                 })} />
                                 <span className="absolute right-2 bottom-12" onClick={() => setShowpassword(!showpassword)}>

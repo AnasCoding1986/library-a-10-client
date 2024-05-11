@@ -91,10 +91,10 @@ const Navbar = () => {
                                 <div className="w-10 z-10 rounded-full mr-4 tooltip tooltip-bottom" data-tip={user.displayName}>
                                     <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000" className="rounded-full" alt="User Pic" src={user.photoURL} />
                                 </div>
-                                <button data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000" onClick={logOut} className="btn bg-[#FFC94A]">Logout</button>
+                                <button data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000" onClick={logOut} className="btn bg-[#795458] text-white">Logout</button>
                             </div> :
                             <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2000">
-                                <Link to="/login"><button onClick={logOut} className="btn bg-[#FFC94A]">Login</button></Link>
+                                <Link to="/login"><button onClick={logOut} className="btn bg-[#795458] text-white">Login</button></Link>
                             </div>
                     }
                 </div>
