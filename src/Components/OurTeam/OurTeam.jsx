@@ -20,7 +20,7 @@ const OurTeam = () => {
                 </div>
                 <div className="md:col-span-2">
                     <div className="grid gap-10 grid-cols-1 md:grid-cols-2">
-                        <div className="text-center p-10 bg-[#C08B5C] rounded-xl">
+                        <div className="text-center p-10 bg-[#795458] rounded-xl">
                             <div className="avatar">
                                 <div className="w-32 rounded-full">
                                     <img src={tone} />
@@ -29,7 +29,7 @@ const OurTeam = () => {
                             <h2 className="text-xl font-bold">John Doe</h2>
                             <p>Maneger</p>
                         </div>
-                        <div className="text-center p-10 bg-[#C08B5C] rounded-xl">
+                        <div className="text-center p-10 bg-[#795458] rounded-xl">
                             <div className="avatar">
                                 <div className="w-32 rounded-full">
                                     <img src={ttwo} />
@@ -38,7 +38,7 @@ const OurTeam = () => {
                             <h2 className="text-xl font-bold">Mpopu</h2>
                             <p>Store Keeper</p>
                         </div>
-                        <div className="text-center p-10 bg-[#C08B5C] rounded-xl">
+                        <div className="text-center p-10 bg-[#795458] rounded-xl">
                             <div className="avatar">
                                 <div className="w-32 rounded-full">
                                     <img src={tthree} />
@@ -47,7 +47,7 @@ const OurTeam = () => {
                             <h2 className="text-xl font-bold">Mujbarani</h2>
                             <p>Store Keeper</p>
                         </div>
-                        <div className="text-center p-10 bg-[#C08B5C] rounded-xl">
+                        <div className="text-center p-10 bg-[#795458] rounded-xl">
                             <div className="avatar">
                                 <div className="w-32 rounded-full">
                                     <img src={tfour} />
