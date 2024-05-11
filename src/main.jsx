@@ -16,9 +16,12 @@ import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
 import Update from './Components/Update/Update.jsx';
 import PrivateRpute from './Components/Route/PrivateRpute.jsx';
 import MyList from './Components/MyList/MyList.jsx';
-import GrandTotal from './Components/GrandTotal/GrandTotal.jsx';
 import Spots from './Components/Spots/Spots.jsx';
 import AllBooks from './Components/AllBooks/AllBooks.jsx';
+import Nobel from './Components/CategoriesOfBook/Nobel.jsx';
+import Thriller from './Components/CategoriesOfBook/Thriller.jsx';
+import Drama from './Components/CategoriesOfBook/Drama.jsx';
+import History from './Components/CategoriesOfBook/History.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,7 +33,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
       },
       {
         path: "/allBooks",
@@ -38,9 +40,24 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/books')
       },
       {
-        path: "/grandTotal",
-        element: <GrandTotal></GrandTotal>,
-        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
+        path: "/nobel",
+        element: <Nobel></Nobel>,
+        loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/thriller",
+        element: <Thriller></Thriller>,
+        loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/drama",
+        element: <Drama></Drama>,
+        loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/history",
+        element: <History></History>,
+        loader: () => fetch('http://localhost:5000/books')
       },
       {
         path: "/addSpots",
