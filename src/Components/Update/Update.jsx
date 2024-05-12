@@ -12,11 +12,11 @@ const Update = () => {
         e.preventDefault();
         const form = e.target;
         const photo = form.photo.value;
-        const bookName = form.bookName.value;
-        const authorName = form.authorName.value;
+        const name = form.name.value;
+        const author = form.author.value;
         const category = form.category.value;
         const rating = form.rating.value;
-        const updatedBook = { photo, bookName, authorName, category, rating };
+        const updatedBook = { photo, name, author, category, rating };
         console.log(updatedBook);
 
         // send data to the server
@@ -52,11 +52,11 @@ const Update = () => {
                     </div>
                     <div className="my-2">
                         <label className="font-medium">Book Name</label><br />
-                        <input className="border-2 w-full p-2 mt-2" type="text" name="bookName" placeholder="Book Name" defaultValue={name} />
+                        <input className="border-2 w-full p-2 mt-2" type="text" name="name" placeholder="Book Name" defaultValue={name} />
                     </div>
                     <div className="my-2">
                         <label className="font-medium">Author Name</label><br />
-                        <input className="border-2 w-full p-2 mt-2" type="text" name="authorName" placeholder="Author Name" defaultValue={author} />
+                        <input className="border-2 w-full p-2 mt-2" type="text" name="author" placeholder="Author Name" defaultValue={author} />
                     </div>
                     <div className="my-2">
                         <label className="font-medium">Category</label><br />

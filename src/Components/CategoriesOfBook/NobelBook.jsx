@@ -1,6 +1,7 @@
 import Rating from 'react-rating';
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const NobelBook = ({book}) => {
     const { _id, image, name, quantity, author, category, description, rating, contents } = book;
@@ -23,7 +24,7 @@ const NobelBook = ({book}) => {
                 <p className="font-medium"><span className="font-clicker">Author:</span> {author}</p>
                 <p className="font-medium"><span className="font-clicker">Category:</span> {category}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn text-white bg-[#453F78]">Update</button>
+                <Link to={`/detail/${_id}`}><button className="btn text-white bg-[#453F78]">Details</button></Link>
                 </div>
             </div>
         </div>

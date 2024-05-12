@@ -23,6 +23,7 @@ import Thriller from './Components/CategoriesOfBook/Thriller.jsx';
 import Drama from './Components/CategoriesOfBook/Drama.jsx';
 import History from './Components/CategoriesOfBook/History.jsx';
 import AddBooks from './Components/AddBooks/AddBooks.jsx';
+import BookDetails from './Components/BookDetails/BookDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         path: "/allBooks",
         element: <AllBooks></AllBooks>,
         loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
       },
       {
         path: "/nobel",
@@ -59,6 +65,11 @@ const router = createBrowserRouter([
         path: "/history",
         element: <History></History>,
         loader: () => fetch('http://localhost:5000/books')
+      },
+      {
+        path: "/detail/:id",
+        element: <BookDetails></BookDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
       },
       {
         path: "/addBooks",
@@ -83,12 +94,6 @@ const router = createBrowserRouter([
         element: <Spots></Spots>,
         loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/countries/${params.id}`)
       },
-      {
-        path: "/update/:id",
-        element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
-      },
-
       {
         path: "/login",
         element: <Login></Login>,

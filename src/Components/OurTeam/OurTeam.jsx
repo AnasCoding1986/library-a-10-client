@@ -10,15 +10,15 @@ const OurTeam = () => {
             <p className="mb-20 mt-5 text-center font-medium">Our members are always ready to help you</p>
             <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
                 <div className="md:col-span-1 flex justify-center flex-col">
-                    <h2 className="text-2xl font-semibold">Our people make us great</h2>
-                    <p className="my-5 font-medium">All the members of our taem are really helpful towards our student. <br />
+                    <h2 className="text-2xl font-bold">Our people make us great</h2>
+                    <p className="mt-10 font-normal">All the members of our taem are really helpful towards our student. <br />
                         They are always ready to give their best for making your best experience.
-                        <div className="mt-5">
+                        <div className="mt-10">
                             <button className="btn btn-secondary border-none bg-[#795458]">Contact</button>
                         </div>
                     </p>
                 </div>
-                <div className="md:col-span-2">
+                <div className="md:col-span-2 text-white">
                     <div className="grid gap-10 grid-cols-1 md:grid-cols-2">
                         <div className="text-center p-10 bg-[#795458] rounded-xl">
                             <div className="avatar">
