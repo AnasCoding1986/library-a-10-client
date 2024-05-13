@@ -13,19 +13,27 @@ const BookDetails = () => {
     const userEmail = user.email;
 
     const [returnDate, setReturnDate] = useState("");
+    const [quantity, setQuantity] = useState(0); // Initialize quantity state
 
     const book = useLoaderData();
-    const { image, name, author, category, rating, contents } = book;
+    const { _id, image, name, author, category, rating, contents } = book;
 
     const handleBorrow = () => {
         // Handle borrow action here
+        if (quantity > 0) {
+            setQuantity(quantity - 1); // Reduce quantity by 1
+            if (quantity === 1) {
+                // Disable Borrow button when quantity becomes 0
+                document.getElementById('borrowButton').disabled = true;
+            }
+        }
     };
 
     return (
-        <div className="py-28 px-10 bg-[#f8f8fa]">
+        <div className="py-28 px-10 bg-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="md:col-span-1 p-5">
-                    <img className="rounded-xl h-80" src={image} alt="" />
+                <div className="md:col-span-1 p-5" style={{ height: '250px' }}>
+                    <img className="rounded-xl h-full w-full object-cover" src={image} alt="" />
                 </div>
                 <div className="md:col-span-2 text-center space-y-1">
                     <h3 className="text-2xl font-bold">{name}</h3>
@@ -40,22 +48,20 @@ const BookDetails = () => {
                     <p className="font-medium"><span className="font-clicker">Read Book:</span> {contents}</p>
 
                     {/* Borrow button with modal */}
-                    <div className="pt-5">
-                        <button className="btn bg-[#795458] text-white w-full" onClick={() => document.getElementById('borrowModal').showModal()}>Borrow</button>
-                    </div>
-
+                    <button id="borrowButton" className="btn bg-[#795458] text-white w-full" onClick={() => document.getElementById('borrowModal').showModal()}>Borrow</button>
+                    
                     {/* Modal for Borrow Form */}
                     <dialog id="borrowModal" className="modal">
                         <div className="modal-box">
-                            <form onSubmit={handleBorrow}>
-                                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById('borrowModal').close()}>✕</button>
+                            <form onSubmit={handleBorrow} className="flex flex-col gap-4">
+                                <button className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2" onClick={() => document.getElementById('borrowModal').close()}>✕</button>
                                 <h3 className="font-bold text-lg">Borrow Form</h3>
                                 <label htmlFor="returnDate">Return Date:</label>
-                                <input type="date" id="returnDate" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} required />
+                                <input type="date" id="returnDate" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} required className="input-field" />
                                 <label htmlFor="borrowerName">Your Name:</label>
-                                <input type="text" id="borrowerName" value={userName} readOnly />
+                                <input type="text" id="borrowerName" value={userName} readOnly className="input-field" />
                                 <label htmlFor="borrowerEmail">Your Email:</label>
-                                <input type="email" id="borrowerEmail" value={userEmail} readOnly />
+                                <input type="email" id="borrowerEmail" value={userEmail} readOnly className="input-field" />
                                 <button type="submit" className="btn bg-[#795458] text-white w-full">Submit</button>
                             </form>
                         </div>
