@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-
+import Swal from "sweetalert2";
 
 const BookDetails = () => {
     const { user } = useContext(AuthContext);
@@ -13,21 +13,80 @@ const BookDetails = () => {
     const userEmail = user.email;
 
     const [returnDate, setReturnDate] = useState("");
-    const [quantity, setQuantity] = useState(0); // Initialize quantity state
-
     const book = useLoaderData();
-    const { _id, image, name, author, category, rating, contents } = book;
+    const { _id, image, name, quantity, author, category, description, rating, contents } = book;
+    const [cQuantity, setCQuantity] = useState(quantity);
 
-    const handleBorrow = () => {
-        // Handle borrow action here
-        if (quantity > 0) {
-            setQuantity(quantity - 1); // Reduce quantity by 1
-            if (quantity === 1) {
-                // Disable Borrow button when quantity becomes 0
-                document.getElementById('borrowButton').disabled = true;
-            }
+    const handleBorrow = (e) => {
+        e.preventDefault();
+        console.log('borrow submit');
+        if (cQuantity > 0) {
+            // setCQuantity(cQuantity - 1); // Decrease quantity locally
+    
+            const borrowedDate = new Date().toISOString().split('T')[0]; // Borrowed date
+    
+            const updatedBook = {
+                bookId: book._id,
+                image: book.image,
+                name: book.name,
+                author: book.author,
+                category: book.category,
+                rating: book.rating,
+                quantity: quantity,
+                borrowedDate: borrowedDate, // Include borrowed date
+                returnDate: returnDate // Include return date from modal
+            };
+    
+            // Send borrowed book to server
+            fetch('http://localhost:5000/borrowedBooks', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updatedBook)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.result.insertedId) {
+                    console.log('borrowed successfully');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Borrowed Book added successfully to borrowed pages',
+                        icon: 'success',
+                        confirmButtonText: 'Next'
+                    });
+    
+                    // Send updated book information to update the book in the database
+                    // fetch(`http://localhost:5000/books/${book._id}`, {
+                    //     method: 'PUT',
+                    //     headers: {
+                    //         'content-type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify(updatedBook)
+                    // })
+                    // .then(res => res.json())
+                    // .then(data => {
+                    //     if (data.modifiedCount > 0) {
+                    //         Swal.fire({
+                    //             title: 'Success!',
+                    //             text: 'Book updated successfully',
+                    //             icon: 'success',
+                    //             confirmButtonText: 'Next'
+                    //         });
+                    //     }
+                    // });
+                }
+            })
+            .catch(error => {
+                console.error('Error borrowing book:', error);
+                // Handle errors here
+            });
         }
     };
+    
+    
+    
 
     return (
         <div className="py-28 px-10 bg-gray-100">
@@ -35,7 +94,7 @@ const BookDetails = () => {
                 <div className="md:col-span-1 p-5" style={{ height: '250px' }}>
                     <img className="rounded-xl h-full w-full object-cover" src={image} alt="" />
                 </div>
-                <div className="md:col-span-2 text-center space-y-1">
+                <div className="md:col-span-2 text-center space-y-2">
                     <h3 className="text-2xl font-bold">{name}</h3>
                     <Rating
                         emptySymbol={<CiStar />}
@@ -44,13 +103,17 @@ const BookDetails = () => {
                         readonly
                     />
                     <p className="font-medium"><span className="font-clicker">Author:</span> {author}</p>
-                    <p className="font-medium"><span className="font-clicker">Category:</span> {category}</p>
+
+                    <div className="flex justify-around">
+                        <p className="font-medium"><span className="font-clicker">Category:</span> {category}</p>
+
+                        <p className="font-medium"><span className="font-clicker">Quantity:</span> {cQuantity}</p>
+                    </div>
+
                     <p className="font-medium"><span className="font-clicker">Read Book:</span> {contents}</p>
 
-                    {/* Borrow button with modal */}
-                    <button id="borrowButton" className="btn bg-[#795458] text-white w-full" onClick={() => document.getElementById('borrowModal').showModal()}>Borrow</button>
-                    
-                    {/* Modal for Borrow Form */}
+                    <button id="borrowButton" className="btn bg-[#795458] text-white w-full" onClick={() => document.getElementById('borrowModal').showModal()}>Borrow now</button>
+
                     <dialog id="borrowModal" className="modal">
                         <div className="modal-box">
                             <form onSubmit={handleBorrow} className="flex flex-col gap-4">

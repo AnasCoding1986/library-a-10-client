@@ -24,6 +24,7 @@ import Drama from './Components/CategoriesOfBook/Drama.jsx';
 import History from './Components/CategoriesOfBook/History.jsx';
 import AddBooks from './Components/AddBooks/AddBooks.jsx';
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
+import BorrowedBooks from './Components/BorrowedBooks/BorrowedBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -76,6 +77,15 @@ const router = createBrowserRouter([
         element: <PrivateRpute><AddBooks></AddBooks></PrivateRpute>
       },
       {
+        path: "/borrowedBooks",
+        element: <BorrowedBooks></BorrowedBooks>,
+        loader: () => fetch('http://localhost:5000/borrowedBooks')
+      },
+
+
+
+
+      {
         path: "/addSpots",
         element: <PrivateRpute><AddTouristSpot></AddTouristSpot></PrivateRpute>
       },
@@ -108,13 +118,12 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
     <AuthProvider>
       
       <div className='max-w-6xl mx-auto'>
       <RouterProvider router={router} />
       </div>
       
-    </AuthProvider>
-  </React.StrictMode>,
+    </AuthProvider>,
 )
