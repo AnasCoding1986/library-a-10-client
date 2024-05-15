@@ -1,16 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import BorrowedBook from "./BorrowedBook";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const BorrowedBooks = () => {
 
-    const borrowedBooks = useLoaderData();
+    const allBorrowedBooks = useLoaderData();
+
+    const { user } = useContext(AuthContext);
+
+    const borrowedBooks = allBorrowedBooks?.filter(borrowedBook => borrowedBook.userEmail === user?.email)
+
+    // const mySpots = spots?.filter(spot => spot.email === user?.email);
 
     const [deletedBookId, setDeletedBookId] = useState(null);
-    console.log(deletedBookId);
 
-    const remainingBorrowedBooks = borrowedBooks.filter(book => book._id !== deletedBookId)
+    const remainingBorrowedBooks = borrowedBooks.filter(book => book._id !== deletedBookId);
 
     // Callback function to handle deletion
     const handleBookDelete = (id) => {

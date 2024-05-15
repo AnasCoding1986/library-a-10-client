@@ -24,15 +24,6 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    if (user) {
-        console.log(user.displayName);
-        console.log(user);
-        console.log(user.photoURL);
-        console.log(user.email);
-    } else {
-        console.log("User not Exixts");
-    }
-
     const navLinks = <>
         <li><NavLink data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" className="mr-3" to="/">Home</NavLink></li>
         {

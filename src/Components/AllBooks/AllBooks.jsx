@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Book from './Book';
 import TableBook from './TableBook';
 
 const AllBooks = () => {
     const allBooks = useLoaderData();
+
+    // const [allBooks,setAllbooks] = useState([]);
+
+    // const url = `http://localhost:5000/books`;
+    // useEffect(() => {
+    //     axios.get(url, {withCredentials:true})
+    //     .then(res => {
+    //         setAllbooks(res.data)
+    //     })
+    // },[url])
+
+
+
     const [viewMode, setViewMode] = useState('card'); // Default view mode is card
 
     const handleViewModeChange = (mode) => {

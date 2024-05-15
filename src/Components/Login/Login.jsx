@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
@@ -26,8 +27,12 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
-                console.log(error);
-                alert("Email or password not matched")
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: error,
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                  });
             })
     }
 

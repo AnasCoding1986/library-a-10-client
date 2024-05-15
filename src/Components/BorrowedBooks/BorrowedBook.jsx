@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 const BorrowedBook = ({book, onDelete}) => {
 
     const {_id, image, name, category, borrowedDate, returnDate} = book;
-    console.log(book);
 
     const handleReturn = id => {
         console.log('return clicked');
@@ -24,17 +23,17 @@ const BorrowedBook = ({book, onDelete}) => {
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",
                         cancelButtonColor: "#d33",
-                        confirmButtonText: "Yes, delete it!"
+                        confirmButtonText: "Yes, return the book!"
                     }).then((result) => {
                         if (result.isConfirmed) {
                             Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
+                                title: "Returned!",
+                                text: "Your book has been returned.",
                                 icon: "success"
                             });
                         }
                     });
-                    console.log("daleted successfully");
+                    console.log("returned successfully");
                 }
             })
     }

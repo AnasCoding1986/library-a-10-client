@@ -15,16 +15,14 @@ const BookDetails = () => {
     const [returnDate, setReturnDate] = useState("");
     const book = useLoaderData();
     const { _id, image, name, quantity, author, category, description, rating, contents } = book;
-    const [cQuantity, setCQuantity] = useState(quantity);
 
     const handleBorrow = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission
         console.log('borrow submit');
-        if (cQuantity > 0) {
-            // setCQuantity(cQuantity - 1); // Decrease quantity locally
-    
+        if (quantity > 0) {
+
             const borrowedDate = new Date().toISOString().split('T')[0]; // Borrowed date
-    
+
             const updatedBook = {
                 bookId: book._id,
                 image: book.image,
@@ -34,9 +32,10 @@ const BookDetails = () => {
                 rating: book.rating,
                 quantity: quantity,
                 borrowedDate: borrowedDate, // Include borrowed date
-                returnDate: returnDate // Include return date from modal
+                returnDate: returnDate, // Include return date from modal
+                userEmail: userEmail // Include user email address
             };
-    
+
             // Send borrowed book to server
             fetch('http://localhost:5000/borrowedBooks', {
                 method: 'POST',
@@ -45,48 +44,50 @@ const BookDetails = () => {
                 },
                 body: JSON.stringify(updatedBook)
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.result.insertedId) {
-                    console.log('borrowed successfully');
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Borrowed Book added successfully to borrowed pages',
-                        icon: 'success',
-                        confirmButtonText: 'Next'
-                    });
-    
-                    // Send updated book information to update the book in the database
-                    // fetch(`http://localhost:5000/books/${book._id}`, {
-                    //     method: 'PUT',
-                    //     headers: {
-                    //         'content-type': 'application/json'
-                    //     },
-                    //     body: JSON.stringify(updatedBook)
-                    // })
-                    // .then(res => res.json())
-                    // .then(data => {
-                    //     if (data.modifiedCount > 0) {
-                    //         Swal.fire({
-                    //             title: 'Success!',
-                    //             text: 'Book updated successfully',
-                    //             icon: 'success',
-                    //             confirmButtonText: 'Next'
-                    //         });
-                    //     }
-                    // });
-                }
-            })
-            .catch(error => {
-                console.error('Error borrowing book:', error);
-                // Handle errors here
-            });
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        console.log('borrowed successfully');
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Borrowed Book added successfully to borrowed pages',
+                            icon: 'success',
+                            confirmButtonText: 'Next'
+                        });
+
+                        // Send updated book information to update the book in the database
+                        // fetch(`http://localhost:5000/books/${book._id}`, {
+                        //     method: 'PUT',
+                        //     headers: {
+                        //         'content-type': 'application/json'
+                        //     },
+                        //     body: JSON.stringify(updatedBook)
+                        // })
+                        // .then(res => res.json())
+                        // .then(data => {
+                        //     if (data.modifiedCount > 0) {
+                        //         Swal.fire({
+                        //             title: 'Success!',
+                        //             text: 'Book updated successfully',
+                        //             icon: 'success',
+                        //             confirmButtonText: 'Next'
+                        //         });
+                        //     }
+                        // });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error borrowing book:', error);
+                    // Handle errors here
+                });
         }
     };
-    
-    
-    
+
+
+
+
+
 
     return (
         <div className="py-28 px-10 bg-gray-100">
@@ -107,7 +108,7 @@ const BookDetails = () => {
                     <div className="flex justify-around">
                         <p className="font-medium"><span className="font-clicker">Category:</span> {category}</p>
 
-                        <p className="font-medium"><span className="font-clicker">Quantity:</span> {cQuantity}</p>
+                        <p className="font-medium"><span className="font-clicker">Quantity:</span> {quantity}</p>
                     </div>
 
                     <p className="font-medium"><span className="font-clicker">Read Book:</span> {contents}</p>
@@ -116,7 +117,7 @@ const BookDetails = () => {
 
                     <dialog id="borrowModal" className="modal">
                         <div className="modal-box">
-                            <form onSubmit={handleBorrow} className="flex flex-col gap-4">
+                            <form className="flex flex-col gap-4">
                                 <button className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2" onClick={() => document.getElementById('borrowModal').close()}>✕</button>
                                 <h3 className="font-bold text-lg">Borrow Form</h3>
                                 <label htmlFor="returnDate">Return Date:</label>
@@ -125,7 +126,13 @@ const BookDetails = () => {
                                 <input type="text" id="borrowerName" value={userName} readOnly className="input-field" />
                                 <label htmlFor="borrowerEmail">Your Email:</label>
                                 <input type="email" id="borrowerEmail" value={userEmail} readOnly className="input-field" />
-                                <button type="submit" className="btn bg-[#795458] text-white w-full">Submit</button>
+                                <button
+                                    className="btn bg-[#795458] text-white w-full"
+                                    onClick={handleBorrow} // Call handleBorrow on button click
+                                >
+                                    Submit
+                                </button>
+
                             </form>
                         </div>
                     </dialog>
