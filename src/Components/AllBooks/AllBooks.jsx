@@ -8,7 +8,7 @@ const AllBooks = () => {
 
     // const [allBooks,setAllbooks] = useState([]);
 
-    // const url = `http://localhost:5000/books`;
+    // const url = `https://tourism-rosy.vercel.app/books`;
     // useEffect(() => {
     //     axios.get(url, {withCredentials:true})
     //     .then(res => {

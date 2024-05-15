@@ -11,12 +11,12 @@ import Home from './Components/Home/Home.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
-import AddTouristSpot from './Components/AddTouristSpot/AddTouristSpot.jsx';
-import SpotDetails from './Components/SpotDetails/SpotDetails.jsx';
+
+
 import Update from './Components/Update/Update.jsx';
 import PrivateRpute from './Components/Route/PrivateRpute.jsx';
-import MyList from './Components/MyList/MyList.jsx';
-import Spots from './Components/Spots/Spots.jsx';
+
+
 import AllBooks from './Components/AllBooks/AllBooks.jsx';
 import Nobel from './Components/CategoriesOfBook/Nobel.jsx';
 import Thriller from './Components/CategoriesOfBook/Thriller.jsx';
@@ -40,37 +40,37 @@ const router = createBrowserRouter([
       {
         path: "/allBooks",
         element: <AllBooks></AllBooks>,
-        loader: () => fetch('http://localhost:5000/books')
+        loader: () => fetch('https://tourism-rosy.vercel.app/books')
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/books/${params.id}`)
       },
       {
         path: "/nobel",
         element: <Nobel></Nobel>,
-        loader: () => fetch('http://localhost:5000/books')
+        loader: () => fetch('https://tourism-rosy.vercel.app/books')
       },
       {
         path: "/thriller",
         element: <Thriller></Thriller>,
-        loader: () => fetch('http://localhost:5000/books')
+        loader: () => fetch('https://tourism-rosy.vercel.app/books')
       },
       {
         path: "/drama",
         element: <Drama></Drama>,
-        loader: () => fetch('http://localhost:5000/books')
+        loader: () => fetch('https://tourism-rosy.vercel.app/books')
       },
       {
         path: "/history",
         element: <History></History>,
-        loader: () => fetch('http://localhost:5000/books')
+        loader: () => fetch('https://tourism-rosy.vercel.app/books')
       },
       {
         path: "/detail/:id",
         element: <PrivateRpute><BookDetails></BookDetails></PrivateRpute>,
-        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/books/${params.id}`)
       },
       {
         path: "/addBooks",
@@ -79,30 +79,7 @@ const router = createBrowserRouter([
       {
         path: "/borrowedBooks",
         element: <BorrowedBooks></BorrowedBooks>,
-        loader: () => fetch('http://localhost:5000/borrowedBooks')
-      },
-
-
-
-
-      {
-        path: "/addSpots",
-        element: <PrivateRpute><AddTouristSpot></AddTouristSpot></PrivateRpute>
-      },
-      {
-        path: "/mylist",
-        element: <PrivateRpute><MyList></MyList></PrivateRpute>,
-        loader: () => fetch('https://tourism-rosy.vercel.app/spot')
-      },
-      {
-        path: "/spot/:id",
-        element: <PrivateRpute><SpotDetails></SpotDetails></PrivateRpute>,
-        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/spot/${params.id}`)
-      },
-      {
-        path: "/countries/:id",
-        element: <Spots></Spots>,
-        loader: ({params}) => fetch(`https://tourism-rosy.vercel.app/countries/${params.id}`)
+        loader: () => fetch('https://tourism-rosy.vercel.app/borrowedBooks')
       },
       {
         path: "/login",

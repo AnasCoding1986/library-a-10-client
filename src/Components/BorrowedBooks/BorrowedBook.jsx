@@ -7,7 +7,7 @@ const BorrowedBook = ({book, onDelete}) => {
 
     const handleReturn = id => {
         console.log('return clicked');
-        fetch(`http://localhost:5000/borrowedBooks/${id}`, {
+        fetch(`https://tourism-rosy.vercel.app/borrowedBooks/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

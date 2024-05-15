@@ -37,7 +37,7 @@ const BookDetails = () => {
             };
 
             // Send borrowed book to server
-            fetch('http://localhost:5000/borrowedBooks', {
+            fetch('https://tourism-rosy.vercel.app/borrowedBooks', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -57,7 +57,7 @@ const BookDetails = () => {
                         });
 
                         // Send updated book information to update the book in the database
-                        // fetch(`http://localhost:5000/books/${book._id}`, {
+                        // fetch(`https://tourism-rosy.vercel.app/books/${book._id}`, {
                         //     method: 'PUT',
                         //     headers: {
                         //         'content-type': 'application/json'

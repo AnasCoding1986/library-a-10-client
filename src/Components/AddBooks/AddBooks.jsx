@@ -40,7 +40,7 @@ const AddBooks = () => {
         console.log(book);
 
         // Send data to the server
-        fetch('http://localhost:5000/books', {
+        fetch('https://tourism-rosy.vercel.app/books', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
